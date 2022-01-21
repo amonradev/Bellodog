@@ -9,4 +9,7 @@ class Home extends BaseController
     {
         return view('Home');
     }
+    public function Cadastro() {
+        return view('Cadastro');
+    }
 }
