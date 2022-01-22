@@ -1,0 +1,123 @@
+/* Cores da identidade Visual
+    Cinza -> #515151
+    Roxo -> #8a4efc
+    Verde -> #45e334 
+*/
+@media only screen and (max-width: 768px) {
+    .imagem-bg-cardapio {
+        top: -35px !important;
+    }
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #515151;
+    font-family: "Source Sans Pro", sans-serif;
+}
+a {
+    text-decoration: none;
+}
+.top-pagina {
+    position: relative;
+    overflow: hidden;
+    height: 350px;
+}
+.container-header-fundo{
+    width: 100%;
+}
+.imagem-bg-cardapio {
+    width: 100%;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: cover;
+    top: -300px;
+    left: -1px;
+    right: -1px;
+    bottom: -1px;
+    border: 0;
+    filter: opacity(75%);
+}
+.logo-cardapio {
+    position: absolute;
+}
+.top-pagina .icon img {
+    border: 5px solid #fff;
+    margin: auto;
+    max-height: 110px;
+}
+.inner {
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+.icon {
+    width: 110px;
+    height: 110px;
+    background-color: #fff;
+    margin: 35px auto;
+    display: flex;
+    align-items: center;
+}
+.img-responsive {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+.top-pagina h1 {
+    font-style: normal;
+    width: 100%;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 28px;
+    font-weight: bold;
+    overflow: hidden;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #fff;
+}
+.top-pagina address {
+    margin-bottom: 0;
+    font-weight: 400;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #fff;
+    text-align: center;
+    font-size: 20px;
+}
+.top-pagina h2 {
+    width: 100%;
+    font-size: 16px;
+    letter-spacing: .5px;
+    font-weight: bold;
+    color: #fff;
+}
+.label-aberto {
+    background-color: #fff;
+    color: #008b00;
+}
+.label-status {
+    display: inline-block;
+    padding: 8px;
+    font-weight: 600;
+    border-radius: 6px;
+    font-size: 20px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.text-white {
+    font-weight: #fff;
+    font-size: 20px;
+}
+.text-bold {
+    font-weight: bold;
+}
+
+
+

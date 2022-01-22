@@ -1,0 +1,65 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #515151;
+    font-family: "Source Sans Pro", sans-serif;
+}
+.nav {
+    flex-direction: row;
+    flex-wrap: nowrap !important;
+    background-color: #fff;
+    width: max-content;
+}
+.li-header {
+    margin: 15px
+}
+.li-header > a {
+    text-decoration: none;
+    color: #515151;
+    font-weight: 600;
+    font-size: 17px;
+}
+.container {
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    width: auto;
+}
+#produtos {
+    margin-top: 10px;
+}
+.panel {
+    margin-bottom: 21px;
+    background-color: #fff;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 1px 1px rgb(0 0 0 / 5%);
+    box-shadow: 0 1px 1px rgb(0 0 0 / 5%);
+}
+.categories .panel-danger > .panel-heading {
+    background-color: #fff;
+    color: #ec2121;
+    border-top: 2px solid #ec2121;
+}
+.panel .panel-heading {
+    border-bottom: 0;
+    font-size: 14px;
+}
+.panel-heading {
+    padding: 10px 15px;
+    border-bottom: 1px solid transparent;
+    border-top-right-radius: 3px;
+    border-top-left-radius: 3px;
+}
+.collapse.in {
+    display: block;
+}
+#cardapio .products li > a, #cardapio .products .product-container .product-item {
+    display: block;
+    padding: 8px;
+    border-bottom: 2px solid transparent;
+    -webkit-transition: border .15s,background .15s;
+    transition: border .15s,background .15s;
+    text-decoration: none;
+}
