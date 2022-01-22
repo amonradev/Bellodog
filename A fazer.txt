@@ -1,0 +1,8 @@
+A fazeres do projeto
+
+Main page já implementada no mobile faltando mudar para a imagem do bellodog e no web falta deixar a imagem fullwidth
+
+Tela de produtos faltando o botão de concluir o pedido que irá abrir um modal trazendo as informções que estão no carrinho, e montar o front por forEach
+php, conforme o tipo produto que está no banco, já incluir ao dar o load da pagina pela model
+
+Falta começar a tela que listará os pedidos na parte do gereciamento, onde a idéia é gerar um looping de consultas a cada 2 minutos

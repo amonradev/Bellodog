@@ -4,20 +4,26 @@ body{
     background-color: #515151;
     font-family: "Source Sans Pro", sans-serif;
 }
+#secao-categories {
+    width: 100%;
+}
 .nav {
     flex-direction: row;
-    flex-wrap: nowrap !important;
-    background-color: #fff;
-    width: max-content;
+    justify-content: space-evenly;
+    background-color: #414141;
+    width: 100%;
 }
 .li-header {
     margin: 15px
 }
 .li-header > a {
     text-decoration: none;
-    color: #515151;
+    color: #45e334;
     font-weight: 600;
     font-size: 17px;
+}
+.card {
+    width: 100% !important;
 }
 .container {
     margin-right: 0 !important;
@@ -27,39 +33,53 @@ body{
     width: auto;
 }
 #produtos {
-    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
-.panel {
-    margin-bottom: 21px;
-    background-color: #fff;
-    border: 1px solid transparent;
-    border-radius: 4px;
-    -webkit-box-shadow: 0 1px 1px rgb(0 0 0 / 5%);
-    box-shadow: 0 1px 1px rgb(0 0 0 / 5%);
+.column {
+    background-color: #414141;
+    width: 90%;
+    border-radius: 2px 2px 15px 15px;
+    color: #45e334;
+    border-top: 2px solid #45e334;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
 }
-.categories .panel-danger > .panel-heading {
-    background-color: #fff;
-    color: #ec2121;
-    border-top: 2px solid #ec2121;
+.produto-painel {
+    margin-top: 20px;
+    width: 100%;
 }
-.panel .panel-heading {
-    border-bottom: 0;
-    font-size: 14px;
+.titulo-tipo {
+    font-size: 20px;
+    font-weight: 600;
 }
-.panel-heading {
-    padding: 10px 15px;
-    border-bottom: 1px solid transparent;
-    border-top-right-radius: 3px;
-    border-top-left-radius: 3px;
+.card {
+    background-color: unset !important;
+    background-clip: unset !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    align-content: center;
 }
-.collapse.in {
-    display: block;
+.card-imagem {
+    max-width: 150px !important;
+    width: 150px !important;
 }
-#cardapio .products li > a, #cardapio .products .product-container .product-item {
-    display: block;
-    padding: 8px;
-    border-bottom: 2px solid transparent;
-    -webkit-transition: border .15s,background .15s;
-    transition: border .15s,background .15s;
-    text-decoration: none;
+.card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.input-shop {
+    border: 0;
+    background-color: #414141;
+    color: #fff;
+    border-radius: 6px;
+    width: 30px;
+    font-size: 18px;
 }

@@ -4,10 +4,10 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class EmpresaModel extends Model
+class HorarioFuncionamentoModel extends Model
 {
     protected $DBGroup          = 'default';
-    protected $table            = 'empresas';
+    protected $table            = 'horariofuncionamentos';
     protected $primaryKey       = 'id';
     protected $useAutoIncrement = true;
     protected $insertID         = 0;

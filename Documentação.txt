@@ -1,0 +1,77 @@
+Documentação do Projeto
+
+Banco de dados:
+
+    Tabelas:
+        pedidos (
+            id int,
+            detalhes varchar(1000),
+            preco_total varchar(10),
+            solicited_at DATETIME default current_TIMESTAMP,
+            status int,
+        )
+        usuarios (
+            id int,
+            nome varchar(255),
+            cep varchar(8),
+            rua varchar(100),
+            bairro varchar(100),
+            numero varchar(10),
+            complemento varchar(100),
+        )
+        produtos (
+            id int NOT NULL auto_increment,
+            nome varchar(255),
+            preco varchar(10),
+            descricao varchar(255),
+            tipo_produto int,
+            url_img varchar(100)
+        )
+        tipo_produtos (
+            lanches int = 1,
+            porcoes int = 2,
+            bebidas int = 3
+        )
+        horario_funcionamento (
+            segunda_abre TIME,
+            segunda_fecha TIME,
+            terca_abre TIME,
+            terca_fecha TIME,
+            quarta_abre TIME,
+            quarta_fecha TIME,
+            quinta_abre TIME,
+            quinta_fecha TIME,
+            sexta_abre TIME,
+            sexta_fecha TIME,
+            sabado_abre TIME,
+            sabado_fecha TIME,
+            domingo_abre TIME,
+            domingo_fecha TIME
+        )
+
+----------------------------------------------------------------
+
+Front End
+
+    Página Home (/):
+        Botão que leva para a tela de produtos que verifica se o estabelecimento está aberto,
+        caso estiver fechado imprime um alerta que está fechado mas redireciona ao cardápio.
+
+    Página Cardápio (/Cardapio):
+        Tela que faz a listagem de todos os produtos que tem no cardápio dinamicamente com o banco,
+        Função de adicionar ou remover itens do carrinho, que é concluido com o fechamento do pedido
+
+    Página Login (/Login):
+        Tela que faz o login do usuário administrador da plataforma redirecionando para a tela de pedidos
+    
+    Página Pedidos (/Pedidos):
+        Tela onde aparece os pedidos dinamicamente conforme são solicitados, faz o get a cada 2 minutos,
+        E lista na tela para o administrados
+
+Backend
+
+    Projeto segue a arquitetura MVC ligada ao framework codeigniter, buscando manter um padrão SOLID,
+    onde cada View, chama uma controller específica, que por sua vez, chama uma model especiífica para cada
+    tabela do Banco
+
+
