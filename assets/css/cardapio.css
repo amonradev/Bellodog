@@ -1,3 +1,8 @@
+@media (min-width: 800px) {
+    .nav {
+        width: 125% !important;
+    }
+}
 body{
     margin: 0;
     padding: 0;
@@ -42,7 +47,7 @@ body{
     background-color: #414141;
     width: 90%;
     border-radius: 2px 2px 15px 15px;
-    color: #45e334;
+    color: #fff;
     border-top: 2px solid #45e334;
     margin-top: 20px;
     display: flex;
@@ -53,7 +58,9 @@ body{
     width: 100%;
 }
 .titulo-tipo {
-    font-size: 20px;
+    font-size: 24px;
+    margin: 10px;
+    color: #45e334;
     font-weight: 600;
 }
 .card {
@@ -61,8 +68,9 @@ body{
     background-clip: unset !important;
     border: 0 !important;
     border-radius: 0 !important;
-    margin: 10px;
+    margin-bottom: 10px;
     display: flex;
+    text-align: center;
     align-items: center;
     align-content: center;
 }
@@ -74,6 +82,7 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 2px !important;
 }
 .input-shop {
     border: 0;
@@ -82,4 +91,13 @@ body{
     border-radius: 6px;
     width: 30px;
     font-size: 18px;
+}
+h5 {
+    font-size: 1.7rem !important;
+}
+.card-preco {
+    font-size: 1.5rem;
+}
+.card-text {
+    font-size: 1.4rem;
 }

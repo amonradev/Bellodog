@@ -3,9 +3,17 @@
     Roxo -> #8a4efc
     Verde -> #45e334 
 */
-@media only screen and (max-width: 768px) {
+@media (max-width: 768px) {
     .imagem-bg-cardapio {
         top: -35px !important;
+    }
+    .background-image {
+        width: 150%;
+    }
+}
+@media (min-width: 800px) {
+    .background-image {
+        width: 100%;
     }
 }
 

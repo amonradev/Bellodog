@@ -1,5 +1,8 @@
 <?php
-$url = 'https://localhost'
+$url = 'https://localhost';
+// echo '<pre>';
+// var_dump($produtos);
+// exit;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -29,43 +32,26 @@ $url = 'https://localhost'
             <div class="titulo-tipo">
                 Lanches
             </div>
-            <div class="card">
-                <img src='<?= $url ?>/assets/uploads/fritas.png' class="card-img-top card-imagem">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <div class="d-flex shop">
-                        <input type="text" class="input-shop" value="0" readonly>
-                        <button class="btn btn-danger btn-icon"><i class="fas fa-minus"></i></button>
-                        <button class="btn btn-success btn-icon"><i class="fas fa-plus"></i></button>
+            <?php
+            foreach ($produtos as $produto) {
+                if ($produto['tipo_produto'] != 1) {
+                } else {
+            ?>
+                    <div class="card">
+                        <img src='<?= $produto['url_img'] ?>' class="card-img-top card-imagem">
+                        <div class="card-body">
+                            <h5 class="card-title"><?= $produto['nome'] ?></h5>
+                            <p class="card-text"><?= $produto['descricao'] ?></p>
+                            <p class="card-preco">R$<?= substr_replace($produto['preco'], '.', -2, 0) ?></p>
+                            <div class="d-flex shop">
+                                <input type="text" id='lanches<?= $produto['id'] ?>' class="input-shop" value="0" readonly>
+                                <button class="btn btn-danger btn-icon" onclick="addProduto('lanches<?= $produto['id'] ?>', 1, '-', '<?= $produto['preco'] ?>')"><i class="fas fa-minus"></i></button>
+                                <button class="btn btn-success btn-icon" onclick="addProduto('lanches<?= $produto['id'] ?>', 1, '+', '<?= $produto['preco'] ?>')"><i class="fas fa-plus"></i></button>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-            <div class="card">
-                <img src='<?= $url ?>/assets/uploads/refrigerante.png' class="card-img-top card-imagem">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    Adicionar ao Carrinho
-                    <div class="d-flex shop">
-                        <input type="text" class="input-shop" value="0" readonly>
-                        <button class="btn btn-danger btn-icon"><i class="fas fa-minus"></i></button>
-                        <button class="btn btn-success btn-icon"><i class="fas fa-plus"></i></button>
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <img src='<?= $url ?>/assets/uploads/fritas.png' class="card-img-top card-imagem">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <div class="d-flex shop">
-                        <input type="text" class="input-shop" value="0" readonly>
-                        <button class="btn btn-danger btn-icon"><i class="fas fa-minus"></i></button>
-                        <button class="btn btn-success btn-icon"><i class="fas fa-plus"></i></button>
-                    </div>
-                </div>
-            </div>
+            <?php }
+            } ?>
         </div>
 
         <!-- Iniciando Porções -->
@@ -73,42 +59,26 @@ $url = 'https://localhost'
             <div class="titulo-tipo">
                 Porções
             </div>
-            <div class="card">
-                <img src='<?= $url ?>/assets/uploads/fritas.png' class="card-img-top card-imagem">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <div class="d-flex shop">
-                        <input type="text" class="input-shop" value="0" readonly>
-                        <button class="btn btn-danger btn-icon"><i class="fas fa-minus"></i></button>
-                        <button class="btn btn-success btn-icon"><i class="fas fa-plus"></i></button>
+            <?php
+            foreach ($produtos as $produto) {
+                if ($produto['tipo_produto'] != 2) {
+                } else {
+            ?>
+                    <div class="card">
+                        <img src='<?= $produto['url_img'] ?>' class="card-img-top card-imagem">
+                        <div class="card-body">
+                            <h5 class="card-title"><?= $produto['nome'] ?></h5>
+                            <p class="card-text"><?= $produto['descricao'] ?></p>
+                            <p class="card-preco">R$<?= substr_replace($produto['preco'], '.', -2, 0) ?></p>
+                            <div class="d-flex shop">
+                                <input type="text" id='porcao<?= $produto['id'] ?>' class="input-shop" value="0" readonly>
+                                <button class="btn btn-danger btn-icon" onclick="addProduto('porcao<?= $produto['id'] ?>', 2, '-', '<?= $produto['preco'] ?>')"><i class="fas fa-minus"></i></button>
+                                <button class="btn btn-success btn-icon" onclick="addProduto('porcao<?= $produto['id'] ?>', 2, '+', '<?= $produto['preco'] ?>')"><i class="fas fa-plus"></i></button>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-            <div class="card">
-                <img src='<?= $url ?>/assets/uploads/refrigerante.png' class="card-img-top card-imagem">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <div class="d-flex shop">
-                        <input type="text" class="input-shop" value="0" readonly>
-                        <button class="btn btn-danger btn-icon"><i class="fas fa-minus"></i></button>
-                        <button class="btn btn-success btn-icon"><i class="fas fa-plus"></i></button>
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <img src='<?= $url ?>/assets/uploads/fritas.png' class="card-img-top card-imagem">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <div class="d-flex shop">
-                        <input type="text" class="input-shop" value="0" readonly>
-                        <button class="btn btn-danger btn-icon"><i class="fas fa-minus"></i></button>
-                        <button class="btn btn-success btn-icon"><i class="fas fa-plus"></i></button>
-                    </div>
-                </div>
-            </div>
+            <?php }
+            } ?>
         </div>
 
         <!-- Iniciando Bebidas -->
@@ -116,43 +86,119 @@ $url = 'https://localhost'
             <div class="titulo-tipo">
                 Bebidas
             </div>
-            <div class="card">
-                <img src='<?= $url ?>/assets/uploads/fritas.png' class="card-img-top card-imagem">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <div class="d-flex shop">
-                        <input type="text" class="input-shop" value="0" readonly>
-                        <button class="btn btn-danger btn-icon"><i class="fas fa-minus"></i></button>
-                        <button class="btn btn-success btn-icon"><i class="fas fa-plus"></i></button>
+            <?php
+            foreach ($produtos as $produto) {
+                if ($produto['tipo_produto'] != 3) {
+                } else {
+            ?>
+                    <div class="card">
+                        <img src='<?= $produto['url_img'] ?>' class="card-img-top card-imagem">
+                        <div class="card-body">
+                            <h5 class="card-title"><?= $produto['nome'] ?></h5>
+                            <p class="card-text"><?= $produto['descricao'] ?></p>
+                            <p class="card-preco">R$<?= substr_replace($produto['preco'], '.', -2, 0) ?></p>
+                            <div class="d-flex shop">
+                                <input type="number" id='bebidas<?= $produto['id'] ?>' class="input-shop" value="0" readonly>
+                                <button class="btn btn-danger btn-icon" onclick="addProduto('bebidas<?= $produto['id'] ?>', 3, '-', '<?= $produto['preco'] ?>')"><i class="fas fa-minus"></i></button>
+                                <button class="btn btn-success btn-icon" onclick="addProduto('bebidas<?= $produto['id'] ?>', 3, '+', '<?= $produto['preco'] ?>')"><i class="fas fa-plus"></i></button>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-            <div class="card">
-                <img src='<?= $url ?>/assets/uploads/refrigerante.png' class="card-img-top card-imagem">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <div class="d-flex shop">
-                        <input type="text" class="input-shop" value="0" readonly>
-                        <button class="btn btn-danger btn-icon"><i class="fas fa-minus"></i></button>
-                        <button class="btn btn-success btn-icon"><i class="fas fa-plus"></i></button>
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <img src='<?= $url ?>/assets/uploads/fritas.png' class="card-img-top card-imagem">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <div class="d-flex shop">
-                        <input type="text" class="input-shop" value="0" readonly>
-                        <button class="btn btn-danger btn-icon"><i class="fas fa-minus"></i></button>
-                        <button class="btn btn-success btn-icon"><i class="fas fa-plus"></i></button>
-                    </div>
-                </div>
-            </div>
+            <?php }
+            } ?>
+        </div>
     </section>
+    <footer>
+        <label style="color: #515151">
+            -
+        </label>
+    </footer>
+
+    <script>
+        window.onload = () => {
+            sessionStorage.removeItem('soma');
+        }
+        const addProduto = (id, produto, op, valor) => {
+            const somaTotal = sessionStorage.getItem('soma');
+            const inputValue = document.getElementById(id).value;
+            var novoValorInput = parseInt(inputValue);
+            if(somaTotal != null) {
+                var novaSomaTotal = parseInt(somaTotal);
+            } else {
+                var novaSomaTotal = 0;
+            }
+            var precoItem = parseInt(valor);
+
+            switch (produto) {
+                case 1:
+                    if (op == '+') {
+                            const newValue = novoValorInput + 1;
+                            document.getElementById(id).value = newValue;
+
+                            const novaSoma = novaSomaTotal + precoItem;
+                            sessionStorage.setItem('soma', novaSoma);
+                    } else {                        
+                        const inputValue = document.getElementById(id).value;
+                        if (inputValue == 0) {
+                            alert('Opa, você não pode deixar menos do que zero um produto.')
+                        } else {
+                            const novaSoma = somaTotal - valor;
+                            sessionStorage.setItem('soma', novaSoma);
+
+                            const newValue = inputValue - 1;
+                            document.getElementById(id).value = newValue;
+                        }
+                    }
+
+                    break;
+
+                case 2:
+                    if (op == '+') {
+                            const newValue = novoValorInput + 1;
+                            document.getElementById(id).value = newValue;
+                            
+                            const novaSoma = novaSomaTotal + precoItem;
+                            sessionStorage.setItem('soma', novaSoma);
+                    } else {                        
+                        const inputValue = document.getElementById(id).value;
+                        if (inputValue == 0) {
+                            alert('Opa, você não pode deixar menos do que zero um produto.')
+                        } else {
+                            const novaSoma = somaTotal - valor;
+                            sessionStorage.setItem('soma', novaSoma);
+
+                            const newValue = inputValue - 1;
+                            document.getElementById(id).value = newValue;
+                        }
+                    }
+                    break;
+
+                case 3:
+                    if (op == '+') {
+                            const newValue = novoValorInput + 1;
+                            document.getElementById(id).value = newValue;
+                            
+                            const novaSoma = novaSomaTotal + precoItem;
+                            sessionStorage.setItem('soma', novaSoma);
+                    } else {                        
+                        const inputValue = document.getElementById(id).value;
+                        if (inputValue == 0) {
+                            alert('Opa, você não pode deixar menos do que zero um produto.')
+                        } else {
+                            const novaSoma = somaTotal - valor;
+                            sessionStorage.setItem('soma', novaSoma);
+
+                            const newValue = inputValue - 1;
+                            document.getElementById(id).value = newValue;
+                        }
+                    }
+                    break;
+                default:
+                    break;
+            }
+        }
+    </script>
+
     <script src="https://kit.fontawesome.com/a8e31d123b.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
